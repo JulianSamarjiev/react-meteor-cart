@@ -10,7 +10,7 @@ export default class Item extends Component {
     return (
       <div>
         <span>{this.props.item.text}</span>
-        <span onClick={this.deleteThisItem.bind(this)}>X</span>
+        <button onClick={this.deleteThisItem.bind(this)}>X</button>
       </div>
     );
   }

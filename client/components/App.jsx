@@ -50,6 +50,7 @@ App.propTypes = {
 };
 
 export default createContainer(() => {
+  Meteor.subscribe('items');
   return {
     items: Items.find({}).fetch(),
   };
