@@ -26,20 +26,24 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <header>
-          <h1>React - Meteor Cart</h1>
+      <div className="container">
+        <header className="header">
+          <h2>React - Meteor Cart</h2>
         </header>
 
-        <form onSubmit={this.handleSubmit.bind(this)} >
-          <input
-            type="text"
-            ref="textInput"
-            placeholder="Type to add a cart item"
-          />
-        </form>
+        <div className="items">
+          {this.renderItems()}
+        </div>
 
-        {this.renderItems()}
+        <div className="add-item-wrapper">
+          <form onSubmit={this.handleSubmit.bind(this)} >
+            <input
+              type="text"
+              ref="textInput"
+              placeholder="Item description"
+            />
+          </form>
+        </div>
       </div>
     );
   }
