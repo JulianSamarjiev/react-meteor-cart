@@ -7,6 +7,8 @@ export default class Item extends Component {
     Items.remove(this.props.item._id);
   }
   render() {
+    let totalPrice = this.props.item.quantity * this.props.item.price;
+
     return (
       <div className="item">
         <div className="row">
@@ -17,13 +19,13 @@ export default class Item extends Component {
             <span>{this.props.item.text}</span>
           </div>
           <div className="col-md-2">
-            <span>1</span>
+            <span>{this.props.item.quantity}</span>
           </div>
           <div className="col-md-2">
-            <span>100</span>
+            <span>{this.props.item.price}</span>
           </div>
           <div className="col-md-2">
-            <span>100</span>
+            <span>{totalPrice}</span>
           </div>
           <div className="col-md-2">
             <button className="item-delete-btn" onClick={this.deleteThisItem.bind(this)}>X</button>
