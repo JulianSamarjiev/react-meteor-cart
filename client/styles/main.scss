@@ -1,27 +1,13 @@
-// General
-input {
-  width: 150px;
-  margin-right: 20px;
-  padding: 10px 20px;
-}
-
-.header {
-  text-align: center;
-}
-.add-item-wrapper {
+.form-add {
   text-align: center;
   margin-top: 40px;
+  .form-control {
+    margin-right: 20px;
+  }
 }
 .item {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding: 20px 0;
-}
-.item-delete-btn {
-  border: 0;
-  background-color: transparent;
-  &:hover {
-    transform: scale(1.5);
-  }
 }
 .items {
   margin-top: 40px;

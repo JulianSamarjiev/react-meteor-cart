@@ -33,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <header className="header">
+        <header className="text-center">
           <h2>React - Meteor Cart</h2>
         </header>
 
@@ -41,13 +41,14 @@ class App extends Component {
           {this.renderItems()}
         </div>
 
-        <div className="add-item-wrapper">
-          <form onSubmit={this.handleSubmit.bind(this)} >
+        <div className="form-add">
+          <form className="form-inline" onSubmit={this.handleSubmit.bind(this)} >
             <input
               type="text"
               ref="textInput"
               placeholder="Item name"
               required
+              className="form-control"
             />
             <input
               type="number"
@@ -56,6 +57,7 @@ class App extends Component {
               ref="quantityInput"
               placeholder="Item quantity"
               required
+              className="form-control"
             />
             <input
               type="number"
@@ -64,8 +66,9 @@ class App extends Component {
               ref="priceInput"
               placeholder="Price"
               required
+              className="form-control"
             />
-            <button type="submit">Add</button>
+            <button className="btn btn-default" type="submit">Add</button>
           </form>
         </div>
       </div>
